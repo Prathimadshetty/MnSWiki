@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Input and Output Validation - Application Security Checklist</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Input and Output Validation";
+        var mkdocs_page_input_path = "Input and Output Validation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Application Security Checklist
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Architecture/">Architecture</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Authentication/">Authentication</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Session%20Management/">Session Management</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Access%20Control/">Access Control</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Input and Output Validation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Cryptography/">Cryptography</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Error%20Handling%20and%20Logging/">Error Handling and Logging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Data%20Protection/">Data Protection</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Communication%20Security/">Communication Security</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Malicious%20Code/">Malicious Code</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Business%20Logic/">Business Logic</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Files%20and%20Resources/">Files and Resources</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Web%20Service/">Web Service</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Configuration%20and%20Operations/">Configurations and Operations</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Application Security Checklist</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>Input and Output Validation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>...</p>
+<table>
+<thead>
+<tr>
+<th align="right">#</th>
+<th align="left">Security Control</th>
+<th align="left">Security Requirement</th>
+<th align="left">CWE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left">Conduct Contextual Output Encoding</td>
+<td align="left">All output functions must contextually encode data before sending it to the user. Depending on where the output will end up in the HTML page, the output must be encoded differently. For example, data placed in the URL context must be encoded differently than data placed in JavaScript context within the HTML page.</td>
+<td align="left">CWE-79</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Prefer Allowlists over Blocklists</td>
+<td align="left">For each user input field, there should be validation on the input content. Allowlisting input is the preferred approach. Only accept data that meets a certain criteria. For input that needs more flexibility, blocklisting can also be applied where known bad input patterns or characters are blocked.</td>
+<td align="left">CWE-159,CWE-144</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">Use Parameterized SQL Queries</td>
+<td align="left">SQL queries should be crafted with user content passed into a bind variable. Queries written this way are safe against SQL injection attacks. SQL queries should not be created dynamically using string concatenation. Similarly, the SQL query string used in a bound or parameterized query should never be dynamically built from user input.</td>
+<td align="left">CWE-89,CWE-564</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">Use Tokens to Prevent Forged Requests</td>
+<td align="left">In order to prevent Cross-Site Request Forgery attacks, you must embed a random value that is not known to third parties into the HTML form. This CSRF protection token must be unique to each request. This prevents a forged CSRF request from being submitted because the attacker does not know the value of the token.</td>
+<td align="left">CWE-352</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left">Set the Encoding for Your Application</td>
+<td align="left">For every page in your application set the encoding using HTTP headers or meta tags within HTML. This ensures that the encoding of the page is always defined and that browser will not have to determine the encoding on its own. Setting a consistent encoding, like UTF-8, for your application reduces the overall risk of issues like Cross-Site Scripting.</td>
+<td align="left">CWE-172</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left">Validate Uploaded Files</td>
+<td align="left">When accepting file uploads from the user make sure to validate the size of the file, the file type, and the file contents as well as ensuring that it is not possible to override the destination path for the file.</td>
+<td align="left">CWE-434,CWE-616,CWE-22</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left">Use the Nosniff Header for Uploaded Content</td>
+<td align="left">When hosting user uploaded content which can be viewed by other users, use the X-Content-Type-Options: nosniff header so that browsers do not try to guess the data type. Sometimes the browser can be tricked into displaying the data type incorrectly (e.g. showing a GIF file as HTML). Always let the server or application determine the data type.</td>
+<td align="left">CWE-430</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left">Validate the Source of Input</td>
+<td align="left">The source of the input must be validated. For example, if input is expected from a POST request do not accept the input variable from a GET request.</td>
+<td align="left">CWE-20,CWE-346</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left">Use the X-Frame-Options Header</td>
+<td align="left">Use the X-Frame-Options header to prevent content from being loaded by a foreign site in a frame. This mitigates Clickjacking attacks. For older browsers that do not support this header add framebusting Javascript code to mitigate Clickjacking (although this method is not foolproof and can be circumvented).</td>
+<td align="left">CWE-693</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left">Use Secure HTTP Response Headers</td>
+<td align="left">The Content Security Policy (CSP), X-XSS-Protection, X-Content-Type-Options headers help defend against Cross-Site Scripting(XSS) attack. In specific, CSP should be customized for the application to lock down the source and location of content plus adding logging to provide some attack detection capability on the front end.</td>
+<td align="left">CWE-79,CWE-692</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left">Deserialize Untrusted Data with Proper Controls</td>
+<td align="left">When handling serialized data from untrusted source (or passing through untrusted paths), proper controls have to be in place to prevent attacker from abusing the automatic data structure rebuilding capability within the programming language. Each programming platform has its own mitigation strategy which range from using alternative data interchange format such as JSON to restricting the types of objects that can be deserialized. Refer to OWASP Deserialization Cheat Sheet for some great defense information.</td>
+<td align="left">CWE-502</td>
+</tr>
+</tbody>
+</table>
+<p>...</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Access%20Control/" class="btn btn-neutral float-left" title="Access Control"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Cryptography/" class="btn btn-neutral float-right" title="Cryptography">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Access%20Control/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Cryptography/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

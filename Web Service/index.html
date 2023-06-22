@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Web Service - Application Security Checklist</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Web Service";
+        var mkdocs_page_input_path = "Web Service.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Application Security Checklist
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Architecture/">Architecture</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Authentication/">Authentication</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Session%20Management/">Session Management</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Access%20Control/">Access Control</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Input%20and%20Output%20Validation/">Input and Output Validation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Cryptography/">Cryptography</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Error%20Handling%20and%20Logging/">Error Handling and Logging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Data%20Protection/">Data Protection</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Communication%20Security/">Communication Security</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Malicious%20Code/">Malicious Code</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Business%20Logic/">Business Logic</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Files%20and%20Resources/">Files and Resources</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Web Service</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Configuration%20and%20Operations/">Configurations and Operations</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Application Security Checklist</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>Web Service</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>...</p>
+<table>
+<thead>
+<tr>
+<th align="right">#</th>
+<th align="left">Security Control</th>
+<th align="left">Security Requirement</th>
+<th align="left">CWE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td align="left">Generic Web Service Security Verification Requirements</td>
+<td align="left">Verify that all application components use the same encodings and parsers to avoid parsing attacks that exploit different URI or file parsing behavior that could be used in SSRF and RFI attacks.</td>
+<td align="left">CWE-116</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Generic Web Service Security Verification Requirements</td>
+<td align="left">Verify that access to administration and management functions is limited to authorized administrators.</td>
+<td align="left">CWE-419</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">Generic Web Service Security Verification Requirements</td>
+<td align="left">Verify API URLs do not expose sensitive information, such as the API key, session tokens etc.</td>
+<td align="left">CWE-598</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">Generic Web Service Security Verification Requirements</td>
+<td align="left">Verify that authorization decisions are made at both the URI, enforced by programmatic or declarative security at the controller or router, and at the resource level, enforced by model-based permissions.</td>
+<td align="left">CWE-285</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left">Generic Web Service Security Verification Requirements</td>
+<td align="left">Verify that requests containing unexpected or missing content types are rejected with appropriate headers (HTTP response status 406 Unacceptable or 415 Unsupported Media Type).</td>
+<td align="left">CWE-434</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left">RESTful Web Service Verification Requirements</td>
+<td align="left">Verify that enabled RESTful HTTP methods are a valid choice for the user or action, such as preventing normal users using DELETE or PUT on protected API or resources.</td>
+<td align="left">CWE-650</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left">RESTful Web Service Verification Requirements</td>
+<td align="left">Verify that JSON schema validation is in place and verified before accepting input.</td>
+<td align="left">CWE-20</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left">RESTful Web Service Verification Requirements</td>
+<td align="left">Verify that RESTful web services that utilize cookies are protected from Cross-Site Request Forgery via the use of at least one or more of the following: double submit cookie pattern, CSRF nonces, or Origin request header checks.</td>
+<td align="left">CWE-352</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left">RESTful Web Service Verification Requirements</td>
+<td align="left">Verify that REST services have anti-automation controls to protect against excessive calls, especially if the API is unauthenticated.</td>
+<td align="left">CWE-770</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left">RESTful Web Service Verification Requirements</td>
+<td align="left">Verify that REST services explicitly check the incoming Content-Type to be the expected one, such as application/xml or application/json.</td>
+<td align="left">CWE-436</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left">RESTful Web Service Verification Requirements</td>
+<td align="left">Verify that the message headers and payload are trustworthy and not modified in transit. Requiring strong encryption for transport (TLS only) may be sufficient in many cases as it provides both confidentiality and integrity protection. Per-message digital signatures can provide additional assurance on top of the transport protections for high-security applications but bring with them additional complexity and risks to weigh against the benefits.</td>
+<td align="left">CWE-345</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="left">SOAP Web Service Verification Requirements</td>
+<td align="left">Verify that XSD schema validation takes place to ensure a properly formed XML document, followed by validation of each input field before any processing of that data takes place.</td>
+<td align="left">CWE-20</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="left">SOAP Web Service Verification Requirements</td>
+<td align="left">Verify that the message payload is signed using WS-Security to ensure reliable transport between client and service.</td>
+<td align="left">CWE-345</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="left">GraphQL and other Web Service Data Layer Security Requirements</td>
+<td align="left">Verify that a query allow list or a combination of depth limiting and amount limiting is used to prevent GraphQL or data layer expression Denial of Service (DoS) as a result of expensive, nested queries. For more advanced scenarios, query cost analysis should be used.</td>
+<td align="left">CWE-770</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="left">GraphQL and other Web Service Data Layer Security Requirements</td>
+<td align="left">Verify that GraphQL or other data layer authorization logic should be implemented at the business logic layer instead of the GraphQL layer.</td>
+<td align="left">CWE-285</td>
+</tr>
+</tbody>
+</table>
+<p>...</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Files%20and%20Resources/" class="btn btn-neutral float-left" title="Files and Resources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Configuration%20and%20Operations/" class="btn btn-neutral float-right" title="Configurations and Operations">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Files%20and%20Resources/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Configuration%20and%20Operations/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
