@@ -216,7 +216,6 @@
 <thead>
 <tr>
 <th align="right">#</th>
-<th align="left">Security Control</th>
 <th align="left">Security Requirement</th>
 <th align="left">CWE</th>
 </tr>
@@ -224,91 +223,76 @@
 <tbody>
 <tr>
 <td align="right">1</td>
-<td align="left">File Upload Requirements</td>
 <td align="left">Verify that the application will not accept large files that could fill up storage or cause a denial of service.</td>
 <td align="left">CWE-400</td>
 </tr>
 <tr>
 <td align="right">2</td>
-<td align="left">File Upload Requirements</td>
 <td align="left">Verify that compressed files are checked for "zip bombs" - small input files that will decompress into huge files thus exhausting file storage limits.</td>
 <td align="left">CWE-409</td>
 </tr>
 <tr>
 <td align="right">3</td>
-<td align="left">File Upload Requirements</td>
 <td align="left">Verify that a file size quota and maximum number of files per user is enforced to ensure that a single user cannot fill up the storage with too many files, or excessively large files.</td>
 <td align="left">CWE-770</td>
 </tr>
 <tr>
 <td align="right">4</td>
-<td align="left">File Integrity Requirements</td>
 <td align="left">Verify that files obtained from untrusted sources are validated to be of expected type based on the file's content.</td>
 <td align="left">CWE-434</td>
 </tr>
 <tr>
 <td align="right">5</td>
-<td align="left">Secure File Execution</td>
 <td align="left">Verify that user-submitted filename metadata is not used directly by system or framework filesystems and that a URL API is used to protect against path traversal.</td>
 <td align="left">CWE-22</td>
 </tr>
 <tr>
 <td align="right">6</td>
-<td align="left">Secure File Execution</td>
 <td align="left">Verify that user-submitted filename metadata is validated or ignored to prevent the disclosure, creation, updating or removal of local files (LFI).</td>
 <td align="left">CWE-73</td>
 </tr>
 <tr>
 <td align="right">7</td>
-<td align="left">Secure File Execution</td>
 <td align="left">Verify that user-submitted filename metadata is validated or ignored to prevent the disclosure or execution of remote files via Remote File Inclusion (RFI) or Server-side Request Forgery (SSRF) attacks.</td>
 <td align="left">CWE-98</td>
 </tr>
 <tr>
 <td align="right">8</td>
-<td align="left">Secure File Execution</td>
 <td align="left">Verify that the application protects against Reflective File Download (RFD) by validating or ignoring user-submitted filenames in a JSON, JSONP, or URL parameter, the response Content-Type header should be set to text/plain, and the Content-Disposition header should have a fixed filename.</td>
 <td align="left">CWE-641</td>
 </tr>
 <tr>
 <td align="right">9</td>
-<td align="left">Secure File Execution</td>
 <td align="left">Verify that untrusted file metadata is not used directly with system API or libraries, to protect against OS command injection.</td>
 <td align="left">CWE-78</td>
 </tr>
 <tr>
 <td align="right">10</td>
-<td align="left">Secure File Execution</td>
 <td align="left">Verify that the application does not include and execute functionality from untrusted sources, such as unverified content distribution networks, JavaScript libraries, node npm libraries, or server-side DLLs.</td>
 <td align="left">CWE-829</td>
 </tr>
 <tr>
 <td align="right">11</td>
-<td align="left">Secure File Storage</td>
 <td align="left">Verify that files obtained from untrusted sources are stored outside the web root, with limited permissions, preferably with strong validation.</td>
 <td align="left">CWE-922</td>
 </tr>
 <tr>
 <td align="right">12</td>
-<td align="left">Secure File Storage</td>
 <td align="left">Verify that files obtained from untrusted sources are scanned by antivirus scanners to prevent upload of known malicious content.</td>
 <td align="left">CWE-509</td>
 </tr>
 <tr>
 <td align="right">13</td>
-<td align="left">Secure File Download</td>
 <td align="left">Verify that the web tier is configured to serve only files with specific file extensions to prevent unintentional information and source code leakage. For example, backup files (e.g. .bak), temporary working files (e.g. .swp), compressed files (.zip, .tar.gz, etc) and other extensions commonly used by editors should be blocked unless required.</td>
 <td align="left">CWE-552</td>
 </tr>
 <tr>
 <td align="right">14</td>
-<td align="left">SSRF Protection Requirements</td>
 <td align="left">Verify that direct requests to uploaded files will never be executed as HTML/JavaScript content.</td>
 <td align="left">CWE-434</td>
 </tr>
 <tr>
 <td align="right">15</td>
-<td align="left">SSRF Protection Requirements</td>
 <td align="left">Verify that the web or application server is configured with an allow list of resources or systems to which the server can send requests or load data/files from.</td>
 <td align="left">CWE-918</td>
 </tr>

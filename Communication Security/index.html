@@ -216,7 +216,6 @@
 <thead>
 <tr>
 <th align="right">#</th>
-<th align="left">Security Control</th>
 <th align="left">Security Requirement</th>
 <th align="left">CWE</th>
 </tr>
@@ -224,49 +223,41 @@
 <tbody>
 <tr>
 <td align="right">1</td>
-<td align="left">Communications Security Requirements</td>
 <td align="left">Verify that secured TLS is used for all client connectivity, and does not fall back to insecure or unencrypted protocols.</td>
 <td align="left">CWE-319</td>
 </tr>
 <tr>
 <td align="right">2</td>
-<td align="left">Communications Security Requirements</td>
 <td align="left">Verify using online or up to date TLS testing tools that only strong algorithms, ciphers, and protocols are enabled, with the strongest algorithms and ciphers set as preferred.</td>
 <td align="left">CWE-326</td>
 </tr>
 <tr>
 <td align="right">3</td>
-<td align="left">Communications Security Requirements</td>
 <td align="left">Verify that old versions of SSL and TLS protocols, algorithms, ciphers, and configuration are disabled, such as SSLv2, SSLv3, or TLS 1.0 and TLS 1.1. The latest version of TLS should be the preferred cipher suite.</td>
 <td align="left">CWE-326</td>
 </tr>
 <tr>
 <td align="right">4</td>
-<td align="left">Server Communications Security Requirements</td>
 <td align="left">Verify that connections to and from the server use trusted TLS certificates. Where internally generated or self-signed certificates are used, the server must be configured to only trust specific internal CAs and specific self-signed certificates. All others should be rejected.</td>
 <td align="left">CWE-295</td>
 </tr>
 <tr>
 <td align="right">5</td>
-<td align="left">Server Communications Security Requirements</td>
 <td align="left">Verify that encrypted communications such as TLS is used for all inbound and outbound connections, including for management ports, monitoring, authentication, API, or web service calls, database, cloud, serverless, mainframe, external, and partner connections. The server must not fall back to insecure or unencrypted protocols.</td>
 <td align="left">CWE-319</td>
 </tr>
 <tr>
 <td align="right">6</td>
-<td align="left">Server Communications Security Requirements</td>
 <td align="left">Verify that all encrypted connections to external systems that involve sensitive information or functions are authenticated.</td>
 <td align="left">CWE-287</td>
 </tr>
 <tr>
 <td align="right">7</td>
-<td align="left">Server Communications Security Requirements</td>
 <td align="left">Verify that proper certification revocation, such as Online Certificate Status Protocol (OCSP) Stapling, is enabled and configured.</td>
 <td align="left">CWE-299</td>
 </tr>
 <tr>
 <td align="right">8</td>
-<td align="left">Server Communications Security Requirements</td>
 <td align="left">Verify that backend TLS connection failures are logged.</td>
 <td align="left">CWE-544</td>
 </tr>

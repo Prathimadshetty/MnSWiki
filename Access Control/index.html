@@ -216,7 +216,6 @@
 <thead>
 <tr>
 <th align="right">#</th>
-<th align="left">Security Control</th>
 <th align="left">Security Requirement</th>
 <th align="left">CWE</th>
 </tr>
@@ -224,25 +223,21 @@
 <tbody>
 <tr>
 <td align="right">1</td>
-<td align="left">Apply Access Controls Checks Consistently</td>
 <td align="left">Always apply the principle of complete mediation, forcing all requests through a common security "gate keeper." This ensures that access control checks are triggered whether or not the user is authenticated.</td>
 <td align="left">CWE-284</td>
 </tr>
 <tr>
 <td align="right">2</td>
-<td align="left">Apply the Principle of Least Privilege</td>
 <td align="left">Make use of a Mandatory Access Control system. All access decisions will be based on the principle of least privilege. If not explicitly allowed then access should be denied. Additionally, after an account is created, rights must be specifically added to that account to grant access to resources.</td>
 <td align="left">CWE-272,CWE-250</td>
 </tr>
 <tr>
 <td align="right">3</td>
-<td align="left">Don't Use Direct Object References for Access Control Checks</td>
 <td align="left">Do not allow direct references to files or parameters that can be manipulated to grant excessive access. Access control decisions must be based on the authenticated user identity and trusted server side information.</td>
 <td align="left">CWE-284</td>
 </tr>
 <tr>
 <td align="right">4</td>
-<td align="left">Don't Use Unvalidated Forwards or Redirects</td>
 <td align="left">An unvalidated forward can allow an attacker to access private content without authentication. Unvalidated redirects allow an attacker to lure victims into visiting malicious sites. Prevent these from occurring by conducting the appropriate access controls checks before sending the user to the given location.</td>
 <td align="left">CWE-601</td>
 </tr>

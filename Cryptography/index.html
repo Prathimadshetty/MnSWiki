@@ -216,7 +216,6 @@
 <thead>
 <tr>
 <th align="right">#</th>
-<th align="left">Security Control</th>
 <th align="left">Security Requirement</th>
 <th align="left">CWE</th>
 </tr>
@@ -224,97 +223,81 @@
 <tbody>
 <tr>
 <td align="right">1</td>
-<td align="left">Have proper data classification</td>
 <td align="left">Verify that regulated private data is stored encrypted while at rest, such as Personally Identifiable Information (PII), sensitive personal information, or data assessed likely to be subject to EU's GDPR.</td>
 <td align="left">CWE-311</td>
 </tr>
 <tr>
 <td align="right">2</td>
-<td align="left">Have proper data classification</td>
 <td align="left">Verify that regulated health data is stored encrypted while at rest, such as medical records, medical device details, or de-anonymized research records.</td>
 <td align="left">CWE-311</td>
 </tr>
 <tr>
 <td align="right">3</td>
-<td align="left">Have proper data classification</td>
 <td align="left">Verify that regulated financial data is stored encrypted while at rest, such as financial accounts, defaults or credit history, tax records, pay history, beneficiaries, or de-anonymized market or research records.</td>
 <td align="left">CWE-311</td>
 </tr>
 <tr>
 <td align="right">4</td>
-<td align="left">Usage of strong cyptographic algorithms</td>
 <td align="left">Verify that all cryptographic modules fail securely, and errors are handled in a way that does not enable Padding Oracle attacks.</td>
 <td align="left">CWE-310</td>
 </tr>
 <tr>
 <td align="right">5</td>
-<td align="left">Usage of strong cyptographic algorithms</td>
 <td align="left">Verify that industry proven or government approved cryptographic algorithms, modes, and libraries are used, instead of custom coded cryptography.</td>
 <td align="left">CWE-327</td>
 </tr>
 <tr>
 <td align="right">6</td>
-<td align="left">Usage of strong cyptographic algorithms</td>
 <td align="left">Verify that encryption initialization vector, cipher configuration, and block modes are configured securely using the latest advice.</td>
 <td align="left">CWE-326</td>
 </tr>
 <tr>
 <td align="right">7</td>
-<td align="left">Usage of strong cyptographic algorithms</td>
 <td align="left">Verify that random number, encryption or hashing algorithms, key lengths, rounds, ciphers or modes, can be reconfigured, upgraded, or swapped at any time, to protect against cryptographic breaks.</td>
 <td align="left">CWE-326</td>
 </tr>
 <tr>
 <td align="right">8</td>
-<td align="left">Usage of strong cyptographic algorithms</td>
 <td align="left">Verify that known insecure block modes (i.e. ECB, etc.), padding modes (i.e. PKCS#1 v1.5, etc.), ciphers with small block sizes (i.e. Triple-DES, Blowfish, etc.), and weak hashing algorithms (i.e. MD5, SHA1, etc.) are not used unless required for backwards compatibility.</td>
 <td align="left">CWE-326</td>
 </tr>
 <tr>
 <td align="right">9</td>
-<td align="left">Usage of strong cyptographic algorithms</td>
 <td align="left">Verify that nonces, initialization vectors, and other single use numbers must not be used more than once with a given encryption key. The method of generation must be appropriate for the algorithm being used.</td>
 <td align="left">CWE-326</td>
 </tr>
 <tr>
 <td align="right">10</td>
-<td align="left">Usage of strong cyptographic algorithms</td>
 <td align="left">Verify that encrypted data is authenticated via signatures, authenticated cipher modes, or HMAC to ensure that ciphertext is not altered by an unauthorized party.</td>
 <td align="left">CWE-326</td>
 </tr>
 <tr>
 <td align="right">11</td>
-<td align="left">Usage of strong cyptographic algorithms</td>
 <td align="left">Verify that all cryptographic operations are constant-time, with no 'short-circuit' operations in comparisons, calculations, or returns, to avoid leaking information.</td>
 <td align="left">CWE-385</td>
 </tr>
 <tr>
 <td align="right">12</td>
-<td align="left">Generate random values</td>
 <td align="left">Verify that all random numbers, random file names, random GUIDs, and random strings are generated using the cryptographic module's approved cryptographically secure random number generator when these random values are intended to be not guessable by an attacker.</td>
 <td align="left">CWE-338</td>
 </tr>
 <tr>
 <td align="right">13</td>
-<td align="left">Generate random values</td>
 <td align="left">Verify that random GUIDs are created using the GUID v4 algorithm, and a Cryptographically-secure Pseudo-random Number Generator (CSPRNG). GUIDs created using other pseudo-random number generators may be predictable.</td>
 <td align="left">CWE-338</td>
 </tr>
 <tr>
 <td align="right">14</td>
-<td align="left">Generate random values</td>
 <td align="left">Verify that random numbers are created with proper entropy even when the application is under heavy load, or that the application degrades gracefully in such circumstances.</td>
 <td align="left">CWE-338</td>
 </tr>
 <tr>
 <td align="right">15</td>
-<td align="left">Verify the secret management is in place</td>
 <td align="left">Verify that a secrets management solution such as a key vault is used to securely create, store, control access to and destroy secrets</td>
 <td align="left">CWE-798</td>
 </tr>
 <tr>
 <td align="right">16</td>
-<td align="left">Verify the secret management is in place</td>
 <td align="left">Verify that key material is not exposed to the application but instead uses an isolated security module like a vault for cryptographic operations.</td>
 <td align="left">CWE-320</td>
 </tr>

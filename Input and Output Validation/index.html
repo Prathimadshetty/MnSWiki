@@ -216,7 +216,6 @@
 <thead>
 <tr>
 <th align="right">#</th>
-<th align="left">Security Control</th>
 <th align="left">Security Requirement</th>
 <th align="left">CWE</th>
 </tr>
@@ -224,67 +223,56 @@
 <tbody>
 <tr>
 <td align="right">1</td>
-<td align="left">Conduct Contextual Output Encoding</td>
 <td align="left">All output functions must contextually encode data before sending it to the user. Depending on where the output will end up in the HTML page, the output must be encoded differently. For example, data placed in the URL context must be encoded differently than data placed in JavaScript context within the HTML page.</td>
 <td align="left">CWE-79</td>
 </tr>
 <tr>
 <td align="right">2</td>
-<td align="left">Prefer Allowlists over Blocklists</td>
 <td align="left">For each user input field, there should be validation on the input content. Allowlisting input is the preferred approach. Only accept data that meets a certain criteria. For input that needs more flexibility, blocklisting can also be applied where known bad input patterns or characters are blocked.</td>
 <td align="left">CWE-159,CWE-144</td>
 </tr>
 <tr>
 <td align="right">3</td>
-<td align="left">Use Parameterized SQL Queries</td>
 <td align="left">SQL queries should be crafted with user content passed into a bind variable. Queries written this way are safe against SQL injection attacks. SQL queries should not be created dynamically using string concatenation. Similarly, the SQL query string used in a bound or parameterized query should never be dynamically built from user input.</td>
 <td align="left">CWE-89,CWE-564</td>
 </tr>
 <tr>
 <td align="right">4</td>
-<td align="left">Use Tokens to Prevent Forged Requests</td>
 <td align="left">In order to prevent Cross-Site Request Forgery attacks, you must embed a random value that is not known to third parties into the HTML form. This CSRF protection token must be unique to each request. This prevents a forged CSRF request from being submitted because the attacker does not know the value of the token.</td>
 <td align="left">CWE-352</td>
 </tr>
 <tr>
 <td align="right">5</td>
-<td align="left">Set the Encoding for Your Application</td>
 <td align="left">For every page in your application set the encoding using HTTP headers or meta tags within HTML. This ensures that the encoding of the page is always defined and that browser will not have to determine the encoding on its own. Setting a consistent encoding, like UTF-8, for your application reduces the overall risk of issues like Cross-Site Scripting.</td>
 <td align="left">CWE-172</td>
 </tr>
 <tr>
 <td align="right">6</td>
-<td align="left">Validate Uploaded Files</td>
 <td align="left">When accepting file uploads from the user make sure to validate the size of the file, the file type, and the file contents as well as ensuring that it is not possible to override the destination path for the file.</td>
 <td align="left">CWE-434,CWE-616,CWE-22</td>
 </tr>
 <tr>
 <td align="right">7</td>
-<td align="left">Use the Nosniff Header for Uploaded Content</td>
 <td align="left">When hosting user uploaded content which can be viewed by other users, use the X-Content-Type-Options: nosniff header so that browsers do not try to guess the data type. Sometimes the browser can be tricked into displaying the data type incorrectly (e.g. showing a GIF file as HTML). Always let the server or application determine the data type.</td>
 <td align="left">CWE-430</td>
 </tr>
 <tr>
 <td align="right">8</td>
-<td align="left">Validate the Source of Input</td>
 <td align="left">The source of the input must be validated. For example, if input is expected from a POST request do not accept the input variable from a GET request.</td>
 <td align="left">CWE-20,CWE-346</td>
 </tr>
 <tr>
 <td align="right">9</td>
-<td align="left">Use the X-Frame-Options Header</td>
 <td align="left">Use the X-Frame-Options header to prevent content from being loaded by a foreign site in a frame. This mitigates Clickjacking attacks. For older browsers that do not support this header add framebusting Javascript code to mitigate Clickjacking (although this method is not foolproof and can be circumvented).</td>
 <td align="left">CWE-693</td>
 </tr>
 <tr>
 <td align="right">10</td>
-<td align="left">Use Secure HTTP Response Headers</td>
 <td align="left">The Content Security Policy (CSP), X-XSS-Protection, X-Content-Type-Options headers help defend against Cross-Site Scripting(XSS) attack. In specific, CSP should be customized for the application to lock down the source and location of content plus adding logging to provide some attack detection capability on the front end.</td>
 <td align="left">CWE-79,CWE-692</td>
 </tr>
 <tr>
 <td align="right">11</td>
-<td align="left">Deserialize Untrusted Data with Proper Controls</td>
 <td align="left">When handling serialized data from untrusted source (or passing through untrusted paths), proper controls have to be in place to prevent attacker from abusing the automatic data structure rebuilding capability within the programming language. Each programming platform has its own mitigation strategy which range from using alternative data interchange format such as JSON to restricting the types of objects that can be deserialized. Refer to OWASP Deserialization Cheat Sheet for some great defense information.</td>
 <td align="left">CWE-502</td>
 </tr>

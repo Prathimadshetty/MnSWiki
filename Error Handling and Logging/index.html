@@ -216,7 +216,6 @@
 <thead>
 <tr>
 <th align="right">#</th>
-<th align="left">Security Control</th>
 <th align="left">Security Requirement</th>
 <th align="left">CWE</th>
 </tr>
@@ -224,55 +223,46 @@
 <tbody>
 <tr>
 <td align="right">1</td>
-<td align="left">Display Generic Error Messages</td>
 <td align="left">Error messages should not reveal details about the internal state of the application. For example, file system path and stack information should not be exposed to the user through error messages.</td>
 <td align="left">CWE-209</td>
 </tr>
 <tr>
 <td align="right">2</td>
-<td align="left">No Unhandled Exceptions</td>
 <td align="left">Given the languages and frameworks in use for web application development, never allow an unhandled exception to occur. Error handlers should be configured to handle unexpected errors and gracefully return controlled output to the user.</td>
 <td align="left">CWE-391</td>
 </tr>
 <tr>
 <td align="right">3</td>
-<td align="left">Suppress Framework Generated Errors</td>
 <td align="left">Your development framework or platform may generate default error messages. These should be suppressed or replaced with customized error messages as framework generated messages may reveal sensitive information to the user.</td>
 <td align="left">CWE-209</td>
 </tr>
 <tr>
 <td align="right">4</td>
-<td align="left">Log All Authentication Activities</td>
 <td align="left">Any authentication activities, whether successful or not, should be logged.</td>
 <td align="left">CWE-778</td>
 </tr>
 <tr>
 <td align="right">5</td>
-<td align="left">Log All Privilege Changes</td>
 <td align="left">Any activities or occasions where the user's privilege level changes should be logged.</td>
 <td align="left">CWE-778</td>
 </tr>
 <tr>
 <td align="right">6</td>
-<td align="left">Log Administrative Activities</td>
 <td align="left">Any administrative activities on the application or any of its components should be logged.</td>
 <td align="left">CWE-778</td>
 </tr>
 <tr>
 <td align="right">7</td>
-<td align="left">Log Access to Sensitive Data</td>
 <td align="left">Any access to sensitive data should be logged. This is particularly important for corporations that have to meet regulatory requirements like HIPAA, PCI, or SOX.</td>
 <td align="left">CWE-778</td>
 </tr>
 <tr>
 <td align="right">8</td>
-<td align="left">Do Not Log Inappropriate Data</td>
 <td align="left">While logging errors and auditing access is important, sensitive data should never be logged in an unencrypted form. For example, under HIPAA and PCI, it would be a violation to log sensitive data into the log itself unless the log is encrypted on the disk. Additionally, it can create a serious exposure point should the web application itself become compromised.</td>
 <td align="left">CWE-532</td>
 </tr>
 <tr>
 <td align="right">9</td>
-<td align="left">Store Logs Securely</td>
 <td align="left">Logs should be stored and maintained appropriately to avoid information loss or tampering by intruder. Log retention should also follow the retention policy set forth by the organization to meet regulatory requirements and provide enough information for forensic and incident response activities.</td>
 <td align="left">CWE-533</td>
 </tr>
