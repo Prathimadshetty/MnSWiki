@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Access guide to security tools - Application Security</title>
+        <title>Application Security - Application Security</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -124,28 +124,28 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../ToolsAndServices/" class="dropdown-item">Tooling And Services</a>
+    <a href="../../Tools/ToolsAndServices/" class="dropdown-item">Tooling And Services</a>
 </li>
                                     
 <li>
-    <a href="../FOD/" class="dropdown-item">FOD</a>
+    <a href="../../Tools/FOD/" class="dropdown-item">FOD</a>
 </li>
                                     
 <li>
-    <a href="../Snyk/" class="dropdown-item">Snyk</a>
+    <a href="../../Tools/Snyk/" class="dropdown-item">Snyk</a>
 </li>
                                     
 <li>
-    <a href="../Trufflehog/" class="dropdown-item">Trufflehog</a>
+    <a href="../../Tools/Trufflehog/" class="dropdown-item">Trufflehog</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Access guide to security tools</a>
+    <a href="../../Tools/AccessToTools/" class="dropdown-item">Access guide to security tools</a>
 </li>
                                 </ul>
                             </li>
@@ -179,16 +179,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../Trufflehog/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../../Awareness/ImmersiveLabs/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -207,8 +197,28 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#access-to-security-tools-snyk-and-fod" class="nav-link">Access To Security tools Snyk and FOD</a>
+            <li class="nav-item" data-level="1"><a href="#application-security" class="nav-link">Application Security</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#purpose" class="nav-link">Purpose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#audience" class="nav-link">Audience</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#objectives" class="nav-link">Objectives</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#triggers" class="nav-link">Triggers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#capabilities" class="nav-link">Capabilities</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -216,35 +226,36 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="access-to-security-tools-snyk-and-fod">Access To Security tools Snyk and FOD</h1>
-<p>Process of getting access to security tools FOD and Snyk.</p>
-<p>Steps:</p>
-<ol>
-<li>Application team members to raise a request on AIG platform for being added to AAD group at https://myaccess.microsoft.com/#/access-packages.</li>
-</ol>
-<p>Note: This link to be accessed from browser where M&amp;S cred are authenticated as it is SSO login</p>
-<ol>
-<li>
-<p>Post SSO navigate to Access packages and search for Snyk in search bar</p>
-</li>
-<li>
-<p>While requesting access kindly provide the name of the application for which you have requested access.</p>
-</li>
-<li>
-<p>Once the AD group access is requested the approver shall approve the same and requester will be notified for the same</p>
-</li>
-<li>
-<p>Post approval requestor must perform SSO on below links and inform the appsec team on</p>
-<pre><code>DL -  DL-AppSecTeam@marks-and-spencer.com about the same who will provide them assign the applications.
-</code></pre>
-</li>
-</ol>
-<p>### SSO URLs of the tools</p>
-<pre><code>   Fortify URL https://emea.fortify.com/SSO/Login/c4802e88-116f-4e4f-825d-db080ddbadde
-
-   Synk url :https://app.snyk.io/login/sso
-</code></pre>
-<p>Note : Performing SSO from the above links in the browser where M&amp;S cred are authenticated is mandatory for getting access to the required applications</p></div>
+<h1 id="application-security">Application Security</h1>
+<p>Welcome to Application Security Services and guidelines</p>
+<h2 id="purpose">Purpose</h2>
+<p>Help engineering teams to build and operate more secure systems by incorporating Secuirty into their SDLC.</p>
+<h2 id="audience">Audience</h2>
+<p>Software Engineering Teams at M&amp;S.</p>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>Reduce the vulnerabilities in M&amp;S applications by creating security automation,        collaborating with teams, creating and aiding with SSDLC standards</li>
+<li>Provide product health metrics and dashboards</li>
+<li>Strengthen application security through CI/CD using tooling, quality gates</li>
+<li>Engaging with engineering communities through their SLDC journey by providing Threat Modeling, workshops, Vulnerability Assessments, Remediation support.</li>
+</ul>
+<h2 id="triggers">Triggers</h2>
+<ul>
+<li>When new applications are being onboarded via Ecosystem builder</li>
+<li>When In-Scope pull requests, repository and central software repo commits are made</li>
+<li>When security design reviews are performed</li>
+<li>When collaborative orchestra action items are raised</li>
+<li>When requests are raised via Zerodai or other channels</li>
+<li>Threat modelling during feature planning and design reviews</li>
+<li>When software vulnerabilities are identified</li>
+</ul>
+<h2 id="capabilities">Capabilities</h2>
+<ul>
+<li>Threat Modeling</li>
+<li>Security testing </li>
+<li>CI/CD security and tooling - SAST,SCA,Secret Scanning and DAST</li>
+<li>Vulnerability remediation</li>
+</ul></div>
             </div>
         </div>
 
